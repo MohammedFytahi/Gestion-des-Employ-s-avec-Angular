@@ -1,9 +1,11 @@
 <h2>Liste des employés</h2>
-<div *ngFor="let employee of employees">
-  <app-employee-card
-    [employee]="employee"
-    (edit)="editEmployee($event)"
-    (delete)="deleteEmployee($event)"
-  ></app-employee-card>
+<div class="employee-list-container">
+  <div *ngFor="let employee of employees" class="employee-card">
+    <app-employee-card
+      [employee]="employee"
+      (edit)="editEmployee($event)"
+      (delete)="deleteEmployee($event)"
+    ></app-employee-card>
+  </div>
 </div>
-<a routerLink="/employees/add">Ajouter un employé</a>
+<a routerLink="/employees/add" class="add-employee-button">Ajouter un employé</a>

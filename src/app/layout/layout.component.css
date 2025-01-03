@@ -6,8 +6,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Fixe la navbar en haut de la page */
+  top: 0; /* Positionne la navbar en haut */
+  left: 0; /* Positionne la navbar à gauche */
+  width: 98%; /* La navbar occupe toute la largeur de la page */
+  z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
 }
-
 .navbar-brand {
   font-size: 1.5em;
   font-weight: bold;
