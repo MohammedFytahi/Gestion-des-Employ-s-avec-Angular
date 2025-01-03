@@ -1,8 +1,20 @@
-<h2>Ajouter un employé</h2>
+
 <form (ngSubmit)="onSubmit()">
-  <input [(ngModel)]="employee.name" name="name" placeholder="Nom" required />
-  <input [(ngModel)]="employee.email" name="email" placeholder="Email" required email />
-  <input [(ngModel)]="employee.hireDate" name="hireDate" placeholder="Date d'embauche" type="date" required />
+  <h2>Ajouter un employé</h2>
+  <div class="form-group">
+    <label for="name">Nom</label>
+    <input [(ngModel)]="employee.name" id="name" name="name" placeholder="Entrez le nom" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [(ngModel)]="employee.email" id="email" name="email" placeholder="Entrez l'email" required email />
+  </div>
+
+  <div class="form-group">
+    <label for="hireDate">Date d'embauche</label>
+    <input [(ngModel)]="employee.hireDate" id="hireDate" name="hireDate" type="date" required />
+  </div>
 
   <button type="submit">Enregistrer</button>
 </form>

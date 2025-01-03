@@ -1,21 +1,38 @@
 /* Style pour le conteneur principal de la liste des employés */
 .employee-list-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /* Style pour chaque carte d'employé */
 .employee-card {
+  flex: 1 1 calc(33.333% - 40px); /* 3 cartes par ligne avec un espace de 20px de chaque côté */
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Bordures plus arrondies */
+  padding: 20px;
+  background-color: #BB2649;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+  min-width: 250px;
+}
+
+/* Effet de survol sur les cartes */
+.employee-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
 }
 
 /* Style pour l'en-tête de la carte d'employé */
+.employee-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 .employee-header h3 {
   margin: 0;
   font-size: 1.5em;
@@ -25,26 +42,34 @@
 .employee-email {
   margin: 5px 0;
   color: #666;
+  font-size: 0.9em;
 }
 
 /* Style pour les détails de l'employé */
 .employee-details {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .employee-hire-date {
   margin: 0;
   color: #888;
+  font-size: 0.9em;
 }
 
 /* Style pour les boutons */
+.button-container {
+  display: flex;
+  gap: 10px; /* Espacement entre les boutons */
+  margin-top: 20px;
+}
+
 .edit-button, .delete-button {
   padding: 8px 12px;
-  margin-right: 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
+  transition: background-color 0.3s ease;
 }
 
 .edit-button {
@@ -73,8 +98,9 @@
   background-color: #007bff;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
 .add-employee-button:hover {

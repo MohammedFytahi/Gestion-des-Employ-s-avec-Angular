@@ -1,11 +1,14 @@
-<div class="employee-card" appHighlight="yellow">
-  <div class="employee-header">
-    <h3>{{ employee.name }}</h3>
-    <p class="employee-email">{{ employee.email }}</p>
+<div class="container">
+  <div class="employee-card" appHighlight="yellow">
+    <div class="employee-header">
+      <h3>{{ employee.name }}</h3>
+      <p class="employee-email">{{ employee.email }}</p>
+    </div>
+    <div class="employee-details">
+      <p class="employee-hire-date">Date d'embauche : {{ employee.hireDate | dateFormat }}</p>
+    </div>
+    <button (click)="onEdit()" class="edit-button">Modifier</button>
+    <button (click)="onDelete()" class="delete-button">Supprimer</button>
   </div>
-  <div class="employee-details">
-    <p class="employee-hire-date">Date d'embauche : {{ employee.hireDate | dateFormat }}</p>
-  </div>
-  <button (click)="onEdit()" class="edit-button">Modifier</button>
-  <button (click)="onDelete()" class="delete-button">Supprimer</button>
+
 </div>

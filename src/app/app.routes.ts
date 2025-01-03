@@ -8,9 +8,9 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent, // Utilisez LayoutComponent comme conteneur principal
     children: [
-      { path: 'employees', component: EmployeeListComponent },
-      { path: 'employees/add', component: EmployeeFormComponent },
-      { path: 'employees/edit/:id', component: EmployeeFormComponent },
+      { path: 'employees', component: EmployeeListComponent }, // Route pour la liste des employés
+      { path: 'employees/add', component: EmployeeFormComponent }, // Route pour ajouter un employé
+      { path: 'employees/edit/:id', component: EmployeeFormComponent }, // Route pour modifier un employé
       { path: '', redirectTo: '/employees', pathMatch: 'full' }, // Redirection par défaut
     ],
   },

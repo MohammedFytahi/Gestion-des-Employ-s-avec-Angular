@@ -1,0 +1,66 @@
+/* Style général du formulaire */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 59px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le titre du formulaire */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Style pour chaque groupe de formulaire */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style pour les labels */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Style pour les champs de formulaire */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de focus sur les champs de formulaire */
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Style pour le bouton */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet de survol sur le bouton */
+button:hover {
+  background-color: #0056b3;
+}
