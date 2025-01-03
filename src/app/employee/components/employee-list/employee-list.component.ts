@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService, Employee } from '../../services/employee.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router'; // Import Router
+import { RouterModule, Router } from '@angular/router';
 import { EmployeeCardComponent } from '../employee-card/employee-card.component';
 
 @Component({
@@ -16,7 +16,7 @@ export class EmployeeListComponent implements OnInit {
 
   constructor(
     private employeeService: EmployeeService,
-    private router: Router // Inject Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
